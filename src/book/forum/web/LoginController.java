@@ -4,11 +4,13 @@ import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import book.forum.domain.User;
+import book.forum.service.UserService;
 
 
 @Controller
@@ -21,14 +23,14 @@ public class LoginController{
 	public String loginPage(){
 		return "login";
 	}
-	s
+	
 	@RequestMapping(value = "/loginCheck.html")
 	public ModelAndView loginCheck(HttpServletRequest request,LoginCommand loginCommand){
 		boolean isValidUser = 
 			   userService.hasMatchUser(loginCommand.getUserName(),
 					                    loginCommand.getPassword());
 		if (!isValidUser) {
-			return new ModelAndView("login", "error", "鐢ㄦ埛鍚嶆垨瀵嗙爜閿欒銆�);
+			return new ModelAndView("login", "error", "出错了");
 		} else {
 			User user = userService.findUserByUserName(loginCommand
 					.getUserName());

@@ -3,10 +3,11 @@ package book.forum.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.baobaotao.dao.LoginLogDao;
-import com.baobaotao.dao.UserDao;
-import com.baobaotao.domain.LoginLog;
-import com.baobaotao.domain.User;
+import book.forum.dao.LoginLogDao;
+import book.forum.dao.UserDao;
+import book.forum.domain.LoginLog;
+import book.forum.domain.User;
+
 
 @Service
 public class UserService {
