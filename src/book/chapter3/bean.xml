@@ -14,14 +14,26 @@
 	/>    
        
     <bean
-    	id="carBetter"
+    	id="carBetters"
     	class="book.chapter3.CarBetter"
     	p:brand="Jiebao"
     	p:maxSpeed="3000"
-    	init-method="myInit"
+    	init-method="myInits"
     	destroy-method="myDestory"
-    	p:scope="singleton"
     />   
-    
+
+	<bean
+		id="myPostBeanProcessor"
+		class="book.chapter3.MyBeanPostProcessor"
+	/>    
+       
+       
+       
+       
+       
+       
+       
+       
+       
        
 </beans>     

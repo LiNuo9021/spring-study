@@ -9,14 +9,14 @@ import org.springframework.beans.factory.config.InstantiationAwareBeanPostProces
 public class MyInstantiationAwareBeanPostProcessor extends InstantiationAwareBeanPostProcessorAdapter{
 
 	public Object postProcessBeforeInstantiation(Class beanClass, String beanName) throws BeansException {
-		if("car".equals(beanName)){
+		if("carBetters".equals(beanName)){
 			System.out.println("MyInstantiationAwareBeanPostProcessor.postProcessBeforeInstantiation");			
 		}		
 		return null;
 	}
 
 	public boolean postProcessAfterInstantiation(Object bean, String beanName) throws BeansException {
-		if("car".equals(beanName)){
+		if("carBetters".equals(beanName)){
 		System.out.println("InstantiationAwareBeanPostProcessor.postProcessAfterInstantiation");
 		}
 		return true;
@@ -25,7 +25,7 @@ public class MyInstantiationAwareBeanPostProcessor extends InstantiationAwareBea
 	public PropertyValues postProcessPropertyValues(
 			PropertyValues pvs, PropertyDescriptor[] pds, Object bean, String beanName)
 			throws BeansException {
-		if("car".equals(beanName)){
+		if("carBetters".equals(beanName)){
 		   System.out.println("InstantiationAwareBeanPostProcessor.postProcessPropertyValues");
 		}
 		return pvs;

@@ -29,6 +29,7 @@ public class CarBetter implements BeanFactoryAware, BeanNameAware, InitializingB
 	}
 
 	public String getColor() {
+		System.out.println("get color");
 		return color;
 	}
 
@@ -45,6 +46,7 @@ public class CarBetter implements BeanFactoryAware, BeanNameAware, InitializingB
 	}
 
 	public void setMaxSpeed(int maxSpeed) {
+		System.out.println("调用setMaxSpeed()设置属性。");
 		this.maxSpeed = maxSpeed;
 	}
 
@@ -60,7 +62,7 @@ public class CarBetter implements BeanFactoryAware, BeanNameAware, InitializingB
 
 	// BeanNameAware接口方法
 	public void setBeanName(String beanName) {
-		System.out.println("调用BeanNameAware.setBeanName()。");
+		System.out.println("调用BeanNameAware.setBeanName()：" + beanName);
 		this.beanName = beanName;
 	}
 
@@ -74,7 +76,7 @@ public class CarBetter implements BeanFactoryAware, BeanNameAware, InitializingB
 		System.out.println("调用DisposableBean.destory()。");
 	}
 
-	public void myInit() {
+	public void myInits() {
 		System.out.println("调用myInit()，将maxSpeed设置为240。");
 		this.maxSpeed = 240;
 	}

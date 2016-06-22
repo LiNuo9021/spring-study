@@ -22,7 +22,7 @@ public class BeanFactorySample {
 		((ConfigurableBeanFactory)beanFactory).addBeanPostProcessor(new MyBeanPostProcessor());
 		((ConfigurableBeanFactory)beanFactory).addBeanPostProcessor(new MyInstantiationAwareBeanPostProcessor());
 		
-		CarBetter carBetter = (CarBetter)beanFactory.getBean("carBetter", CarBetter.class);
+		CarBetter carBetter = (CarBetter)beanFactory.getBean("carBetters", CarBetter.class);
 		carBetter.introduce();
 		
 		((XmlBeanFactory)beanFactory).destroySingletons();
