@@ -5,6 +5,9 @@ public class Car {
 	private String color;
 	private int maxSpeed;
 
+	public Car(){
+		
+	}
 	
 	public Car(String brand, int maxSpeed) {
 		this.brand = brand;
@@ -32,14 +35,14 @@ public class Car {
 	}
 
 //
-//	public void setBrand(String brand) {
-//		this.brand = brand;
-//	}
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
 //
 //
-//	public void setColor(String color) {
-//		this.color = color;
-//	}
+	public void setColor(String color) {
+		this.color = color;
+	}
 //
 //
 //	public void setMaxSpeed(int maxSpeed) {

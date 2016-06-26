@@ -6,7 +6,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
        
-	<bean id="car" class="book.chapter3.ioc.Car">
+	<bean id="car" class="book.chapter3.di.Car">
 		<!-- <constructor-arg name="brand" type="java.lang.String">
 			<value>BMW</value>
 		</constructor-arg>
