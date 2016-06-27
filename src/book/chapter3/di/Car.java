@@ -39,15 +39,12 @@ public class Car {
 		this.brand = brand;
 	}
 
-//
-//	public void setColor(String color) {
-//		this.color = color;
-//	}
-//
-//
-//	public void setMaxSpeed(int maxSpeed) {
-//		this.maxSpeed = maxSpeed;
-//	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+	public void setMaxSpeed(int maxSpeed) {
+		this.maxSpeed = maxSpeed;
+	}
 	
 	
 }

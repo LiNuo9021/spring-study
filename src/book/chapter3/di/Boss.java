@@ -25,7 +25,6 @@ public class Boss {
 	public void setCars(List cars) {
 		this.cars = cars;
 	}
-
-	
-
 }
+
+
