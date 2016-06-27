@@ -7,12 +7,12 @@ public class LookUpSample {
 	public static void main(String[] args) {
 		ApplicationContext ac = new GenericXmlApplicationContext("book/chapter3/di/lookup.xml");
 	
-		Boss boss = (Boss)ac.getBean("boss");
+		Boss2 boss = (Boss2)ac.getBean("boss");
 		Car car = boss.getCar();
 		System.out.println(boss);
 		System.out.println(car);
 
-		Boss boss2 = (Boss)ac.getBean("boss");
+		Boss2 boss2 = (Boss2)ac.getBean("boss");
 		Car car2 = boss2.getCar();
 		System.out.println(boss2);
 		System.out.println(car2);
@@ -23,7 +23,7 @@ public class LookUpSample {
 		
 		System.out.println("=============================");
 		
-		Boss newBoss = (Boss)ac.getBean("newBoss");
+		Boss2 newBoss = (Boss2)ac.getBean("newBoss");
 		System.out.println(boss);
 		Car newCar = newBoss.getCar();//A
 		System.out.println(newCar);

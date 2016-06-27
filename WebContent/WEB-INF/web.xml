@@ -15,17 +15,35 @@
 		</listener-class>
 	</listener>
 
-	<servlet>
-		<!-- 会默认自动加载WEB-INF下的forums-serlvet.xml -->
+	<!-- <servlet>
+		会默认自动加载WEB-INF下的forums-serlvet.xml
 		<servlet-name>forums</servlet-name>
 		<servlet-class>
 			org.springframework.web.servlet.DispatcherServlet
 		</servlet-class>
 		<load-on-startup>3</load-on-startup>
 	</servlet>
-
 	<servlet-mapping>
 		<servlet-name>forums</servlet-name>
 		<url-pattern>*.html</url-pattern>
 	</servlet-mapping>
+	 -->
+	
+	<servlet>
+		<servlet-name>mvcSample</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>4</load-on-startup>
+		<!-- 指定xxx-servlet.xml为其他路径 -->
+		<init-param>
+			<param-name>namespace</param-name>
+			<param-value>mvcSample-servlet</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>mvcSample</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+
+
 </web-app>
