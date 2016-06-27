@@ -8,14 +8,14 @@
        
 	<bean id="car" class="book.chapter3.di.Car" p:brand="BMW" scope="prototype"/>
 
-	<bean id="boss" class="book.chapter3.di.Boss">
+	<bean id="boss" class="book.chapter3.di.Boss2">
 		<property name="car">
 			<ref bean="car"/>
 		</property>
 	</bean>	
 	
 
-	<bean id="newBoss" class="book.chapter3.di.Boss">
+	<bean id="newBoss" class="book.chapter3.di.Boss2">
 		<lookup-method name="getCar" bean="car"/>
 	</bean>	
 		       

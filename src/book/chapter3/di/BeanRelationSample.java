@@ -13,5 +13,13 @@ public class BeanRelationSample {
 		
 		System.out.println("myCar: " + myCar.getBrand() + "-" + myCar.getColor());
 		System.out.format("herCar: %s-%s", herCar.getBrand(), herCar.getColor());
+		
+		System.out.println("====================");
+		
+		CarRef carRef = (CarRef)ac.getBean("carRef");
+		System.out.format("%s-%s", carRef.getCarName(), carRef.getCar().getColor());
+		
+		
+		
 	}
 }

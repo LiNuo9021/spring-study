@@ -14,8 +14,17 @@
 	<bean id="myCar" parent="car"
 		  p:color="black"/>
 		  
-	<bean id="herCar" parent="car"
+	<bean name="herCar" parent="car"
 		  p:color="orange"/>
 	       
+    <bean id="carRef" class="book.chapter3.di.CarRef">
+    	<property name="car">
+    		<ref bean="herCar"/>
+    	</property>
+    	<property name="carName">
+    		<idref bean="car"/>
+    	</property>
+    </bean> 
+    
        
 </beans>
