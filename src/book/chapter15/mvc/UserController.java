@@ -67,13 +67,16 @@ public class UserController {
 		System.out.format("%s-%d", name, age);
 	}
 	
-	//@RequestParam
+	//@RequestParam:可以省略
 	@RequestMapping("/save2")
 	public void save2(@RequestParam("name") String name, @RequestParam("age") int age){
 		System.out.format("%s-%d", name, age);
 	}
 	
-	
+	@RequestMapping("/formatUser")
+	public String formatUser(@RequestParam("user") User user){
+		return "userInfo";
+	}
 	
 	
 }
