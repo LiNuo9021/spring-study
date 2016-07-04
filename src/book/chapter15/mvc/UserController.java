@@ -36,7 +36,8 @@ public class UserController {
 		return mav;
 	}
 	
-	@RequestMapping(value="/add",method=RequestMethod.POST)
+//	@RequestMapping(value="/add",method=RequestMethod.POST)
+	@RequestMapping(value="/add")
 	public ModelAndView addUser(User user){
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("createSuccess");

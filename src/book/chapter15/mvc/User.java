@@ -1,6 +1,7 @@
 package book.chapter15.mvc;
 
-import java.sql.Date;
+
+import java.util.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.NumberFormat;
@@ -8,9 +9,9 @@ import org.springframework.format.annotation.NumberFormat;
 public class User {
 	private String name;
 	private int age;
-	@NumberFormat(pattern="#,###.##")
+//	@NumberFormat(pattern="#,###.##")
 	private long salary;
-	@DateTimeFormat(pattern="yyyy-MM-dd")
+//	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date birthday;
 	
 	public long getSalary() {
@@ -39,6 +40,6 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "My name is " + name + " , I'm " + age + "years old";
+		return "My name is " + name + " , I'm " + age + " years old";
 	}
 }

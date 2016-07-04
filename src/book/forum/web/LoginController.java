@@ -23,7 +23,6 @@ public class LoginController{
 	public String loginPage(){
 		return "login";
 	}
-	
 	@RequestMapping(value = "/loginCheck.html")
 	public ModelAndView loginCheck(HttpServletRequest request,LoginCommand loginCommand){
 		boolean isValidUser = 

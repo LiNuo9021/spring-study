@@ -35,10 +35,11 @@ public class ConverterSample {
 	public void testFormatUser(){
 		RestTemplate restTemplate = new RestTemplate();
 		MultiValueMap<String, String> urlVariables = new LinkedMultiValueMap<String, String>();
-		urlVariables.add("name", "linuo");
-		urlVariables.add("age", "22");
-		urlVariables.add("birthday", "1990-01-01");
-		urlVariables.add("salary", "2000.00");
+//		urlVariables.add("name", "linuo");
+//		urlVariables.add("age", "22");
+//		urlVariables.add("birthday", "1990-01-01");
+//		urlVariables.add("salary", "2000");
+		urlVariables.add("user", "linuo:22:4000:1990-02-01");
 		String html = restTemplate.postForObject("http://localhost:8080/spring-study/user/formatUser", 
 				urlVariables, String.class);
 	}
