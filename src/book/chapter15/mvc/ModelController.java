@@ -15,6 +15,7 @@ public class ModelController {
 	}
 	
 	@ModelAttribute
+	@RequestMapping("/para2")
 	public User transMethodFrom(){
 		User user = new User();
 		user.setAge(11);

@@ -11,6 +11,11 @@
        http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
        
+       
+    <mvc:resources location="/" mapping="/resources/**" cache-period="30000"/>   
+       
+       
+       
     <!-- 会自动创建一个DefaultAnnotaionHandlerMapping和AnnotationMethodHandlerAdapter -->
     <!-- 如果不指定conversion-service，则会自动创建 -->
     <mvc:annotation-driven conversion-service="conversionServer"/>
