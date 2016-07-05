@@ -17,7 +17,7 @@ import org.springframework.web.util.WebUtils;
 public class UserController {
 	
 	
-	@RequestMapping(value="/register")
+	@RequestMapping(value="/register",params="name=test", headers="Host=localhost:8080")
 //	public ModelAndView register(){
 //		ModelAndView mav = new ModelAndView();
 //		mav.setViewName("register");
