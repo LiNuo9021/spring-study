@@ -33,10 +33,19 @@
 	
 	
 	<!-- 配置视图解析器，将ModelAndView及字符串解析为具体的页面 -->
-	<bean
+ 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		p:viewClass="org.springframework.web.servlet.view.JstlView"
 		p:prefix="/WEB-INF/mvcSample/"
 		p:suffix=".jsp" />
+	<!-- <bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+		/>
+ -->
+	<bean id="json" class="org.springframework.web.servlet.view.json.MappingJacksonJsonView"
+		  p:renderedAttributes="name"/>
+
+
+
 
 </beans>
