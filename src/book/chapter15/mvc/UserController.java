@@ -26,6 +26,15 @@ public class UserController {
 		return "register";
 	}
 	
+	@RequestMapping(value="/register2")
+//	public ModelAndView register(){
+//		ModelAndView mav = new ModelAndView();
+//		mav.setViewName("register");
+//		return mav;
+	public String register2(){
+		return "register";
+	}
+	
 	@RequestMapping(value="/get/{name}")
 	public ModelAndView getUser(@PathVariable(value="name") String name){
 		
