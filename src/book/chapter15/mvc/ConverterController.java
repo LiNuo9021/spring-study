@@ -30,7 +30,7 @@ public class ConverterController {
 	@ResponseBody
 	@RequestMapping("/responseImg")
 	public byte[] printImg() throws IOException{
-		Resource image = new ClassPathResource("test.PNG");
+		Resource image = new ClassPathResource("decorator.png");
 		
 		byte[] imageBytes = FileCopyUtils.copyToByteArray(image.getInputStream());
 		
