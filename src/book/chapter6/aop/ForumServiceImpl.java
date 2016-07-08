@@ -4,7 +4,7 @@ public class ForumServiceImpl implements ForumService {
 
 	@Override
 	public void removeTopic(int topicId) {
-		PerformanceMonitor.begin("removeTopic");
+//		PerformanceMonitor.begin("removeTopic");
 		
 		System.out.println("removeTopic execution");
 		try {
@@ -13,7 +13,7 @@ public class ForumServiceImpl implements ForumService {
 			e.printStackTrace();
 		}
 		
-		PerformanceMonitor.end("removeTopic");
+//		PerformanceMonitor.end("removeTopic");
 	}
 
 }

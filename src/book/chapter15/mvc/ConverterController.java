@@ -27,14 +27,6 @@ public class ConverterController {
 		System.out.println("convertUser-users: " + users);
 	}
 	
-	@ResponseBody
-	@RequestMapping("/responseImg")
-	public byte[] printImg() throws IOException{
-		Resource image = new ClassPathResource("decorator.png");
-		
-		byte[] imageBytes = FileCopyUtils.copyToByteArray(image.getInputStream());
-		
-		return imageBytes;
-	}
+	
 	
 }
