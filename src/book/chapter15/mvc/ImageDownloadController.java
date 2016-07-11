@@ -1,8 +1,8 @@
 package book.chapter15.mvc;
 
 import java.io.IOException;
-import java.io.InputStream;
 
+import org.apache.commons.io.IOUtils;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
@@ -24,12 +24,12 @@ public class ImageDownloadController {
 		return imageBytes;
 	}
 	
-//	@ResponseBody
-//	@RequestMapping(value = "/responseImg2", method = RequestMethod.GET, produces = MediaType.IMAGE_JPEG_VALUE)
-//	public byte[] printImg2() throws IOException {
-//	    InputStream in = servletContext.getResourceAsStream("/images/no_image.jpg");
-//	    return IOUtils.toByteArray(in);
-//	}
+	@ResponseBody
+	@RequestMapping(value = "/responseImg2", method = RequestMethod.GET, produces = MediaType.IMAGE_JPEG_VALUE)
+	public byte[] printImg2() throws IOException {
+		Resource image = new ClassPathResource("decorator.png");
+	    return IOUtils.toByteArray(image.getInputStream());
+	}
 }
 
 
