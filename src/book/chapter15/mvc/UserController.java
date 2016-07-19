@@ -1,5 +1,7 @@
 package book.chapter15.mvc;
 
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
@@ -31,7 +33,7 @@ public class UserController {
 //		ModelAndView mav = new ModelAndView();
 //		mav.setViewName("register");
 //		return mav;
-	public String register2(){
+	public String register2(Map map){
 		return "register";
 	}
 	

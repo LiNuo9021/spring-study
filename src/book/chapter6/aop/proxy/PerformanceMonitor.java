@@ -1,4 +1,4 @@
-package book.chapter6.aop;
+package book.chapter6.aop.proxy;
 
 public class PerformanceMonitor {
 	private static ThreadLocal<MethodPerformance> methodPerformance = new ThreadLocal<MethodPerformance>();

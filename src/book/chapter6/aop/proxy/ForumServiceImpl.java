@@ -1,4 +1,4 @@
-package book.chapter6.aop;
+package book.chapter6.aop.proxy;
 
 public class ForumServiceImpl implements ForumService {
 
