@@ -1,6 +1,5 @@
 package book.chapter6.aop.tmp;
 
-import java.awt.image.AreaAveragingScaleFilter;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;

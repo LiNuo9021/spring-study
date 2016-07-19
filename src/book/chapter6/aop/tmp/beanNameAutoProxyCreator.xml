@@ -7,16 +7,15 @@
 	http://www.springframework.org/schema/util 
 	http://www.springframework.org/schema/util/spring-util-3.0.xsd">
 
-	<bean id="waiter" class="review.Waiter"/><!-- 
-	<bean id="advise" class="review.GreetAdvise"/> -->
+	<!-- 普通方法名匹配切面 -->
+	<bean id="waiterTargetErr" class="book.chapter6.aop.tmp.Waiter" />
+	<bean id="waiterTarget" class="book.chapter6.aop.tmp.Waiter" />
+	<bean id="sellerTarget" class="book.chapter6.aop.tmp.Seller" />
+	<bean id="greetingAdvice" class="book.chapter6.aop.tmp.GreetingBeforeAdvice" />
 	
-	<bean id="advise" class="review.GreetInterceptorAdvice"/>
-	
-	<bean id="exceptionAdvise" class="review.GreetExceptionAdvise"/>
-	
-	<bean id="proxyWaiter" class="org.springframework.aop.framework.ProxyFactoryBean"
-		  p:interceptorNames="advise,exceptionAdvise"
-		  p:targetName="waiter"/>
-		
+	<bean id="xxx" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator"
+		  p:beanNames="*Target"
+		  p:interceptorNames="greetingAdvice"
+		  p:optimize="true"/>
 	
 </beans>

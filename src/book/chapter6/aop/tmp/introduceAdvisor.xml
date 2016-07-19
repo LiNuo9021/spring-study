@@ -11,23 +11,11 @@
 	<bean id="waiterTarget" class="book.chapter6.aop.tmp.Waiter" />
 	<bean id="greetingAdvice" class="book.chapter6.aop.tmp.GreetingBeforeAdvice" />
 	
-	<bean id="controlFlowPointcut" class="org.springframework.aop.support.ControlFlowPointcut">
-		<constructor-arg type="java.lang.Class">
-			<value>book.chapter6.aop.tmp.WaiterDelegate</value>
-		</constructor-arg>
-		<constructor-arg name="methodName">
-			<value>service</value>
-		</constructor-arg>
-	</bean>
-	
-	<bean id="greetingAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
-		<property name="pointcut">
-			<ref local="controlFlowPointcut"/>
-		</property>
-		<property name="advice">
+	<bean id="greetingAdvisor" class="org.springframework.aop.support.DefaultIntroductionAdvisor">
+		<constructor-arg>
 			<ref local="greetingAdvice"/>
-		</property>
-	</bean>
+		</constructor-arg>
+	</bean>	
 	
 	<bean id="parent" abstract="true"
 		class="org.springframework.aop.framework.ProxyFactoryBean"

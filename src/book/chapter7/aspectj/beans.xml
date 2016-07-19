@@ -7,16 +7,12 @@
 	http://www.springframework.org/schema/util 
 	http://www.springframework.org/schema/util/spring-util-3.0.xsd">
 
-	<bean id="waiter" class="review.Waiter"/><!-- 
-	<bean id="advise" class="review.GreetAdvise"/> -->
+	<!-- 普通方法名匹配切面 -->
+	<bean id="waiterTarget" class="book.chapter7.aspectj.NaiveWaiter" />
 	
-	<bean id="advise" class="review.GreetInterceptorAdvice"/>
+	<bean id="preGreetAspect" class="book.chapter7.aspectj.PreGreetAspect" />
 	
-	<bean id="exceptionAdvise" class="review.GreetExceptionAdvise"/>
-	
-	<bean id="proxyWaiter" class="org.springframework.aop.framework.ProxyFactoryBean"
-		  p:interceptorNames="advise,exceptionAdvise"
-		  p:targetName="waiter"/>
-		
+	<!-- 自动找到所有AspectJ注解，可以用<aop:aspectj-autoproxy>代替 -->
+	<bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator"/>
 	
 </beans>

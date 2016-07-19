@@ -13,10 +13,11 @@ public class GreetingComposablePointcut {
 		ComposablePointcut cp = new ComposablePointcut();
 		
 		NameMatchMethodPointcut nmmp = new NameMatchMethodPointcut();
-		nmmp.addMethodName("greetTo");
+		nmmp.addMethodName("serveTo");
 		
 		Pointcut cfp = new ControlFlowPointcut(WaiterDelegate.class, "service");
 		
+		//WaiterDelegate的service的serveTo
 		return cp.intersection(cfp).intersection((Pointcut)nmmp);
 	}
 }
