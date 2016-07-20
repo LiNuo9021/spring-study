@@ -14,6 +14,10 @@ public class AdvisorSample2 {
 		waiter.greetTo("linuo");
 		waiter.serveTo("linuoo");
 		
+		Seller seller = (Seller)ac.getBean("sellerTarget");
+		seller.greetTo("hello");
+		seller.serveTo("helloo");
+		
 //		Waiter waiterErr = (Waiter)ac.getBean("waiterTargetErr");
 //		waiterErr.greetTo("linuo");
 //		waiterErr.serveTo("linuoo");
